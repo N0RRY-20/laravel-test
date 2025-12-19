@@ -15,6 +15,9 @@ use App\Http\Controllers\Api\TeacherSubjectController;
 use App\Http\Controllers\Api\StudentController;
 use App\Http\Controllers\Api\GradeController;
 
+// Auth routes (no authentication required)
+require __DIR__ . '/auth.php';
+
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
